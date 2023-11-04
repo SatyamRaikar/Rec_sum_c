@@ -1,0 +1,29 @@
+/******************************************************************************
+
+                            RECURSIVE FUNCTION
+            sum of given series natural numbers
+
+*******************************************************************************/
+
+# include <stdio.h>
+int getsum ( int ,int) ;
+int main( )
+{
+int s ;
+int b;
+printf("enter the number");
+scanf("%d",&b);
+s = getsum ( 0,b ) ; 
+printf ( "The sum of first %d natural numbers is %d\n",b, s ) ;
+return 0 ;
+}
+int getsum ( int n ,int b)
+{
+int sum = 0 ;
+
+
+if ( n == b )
+return 0 ;
+sum = n + getsum ( ++n,b) ;
+return ( sum ) ;
+}
